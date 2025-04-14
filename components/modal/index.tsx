@@ -36,13 +36,13 @@ export function Modal({children,onClose,show,modalTitle}:ModalProps){
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         show && document.body.classList.add('overflow-hidden')
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        show && document.body.classList.remove('overflow-hidden')
+        !show && document.body.classList.remove('overflow-hidden')
     },[show]);
 
     return(
         <div className={classNames('fixed w-full h-full overflow-y-auto z-[100] top-0 left-0 ', {
-            'opacity-100 top-0':show,
-            'opacity-0 -top-full':!show,
+            'opacity-100 ':show,
+            'opacity-0 top-full':!show,
         })}>
             <OverlayShadow closeModal={onClose} show={show} />
             <div className={classNames('py-10 lg:py-10 transition-all container lg:px-10 relative z-50 max-w-2xl',{
