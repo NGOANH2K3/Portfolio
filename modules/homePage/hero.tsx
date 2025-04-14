@@ -46,7 +46,7 @@ const HeroContent = ()=>{
                 </li>
             </ul>
             <div className="flex gap-4 mt-4">
-                <Link href={'/#projects'} legacyBehavior>
+                <Link href={'/#project'} legacyBehavior>
                     <a className="text-sm px-5 py-3 flex w-fit gap-2 items-center font-semibold rounded-full transition bg-primary hover:bg-primary2">
                         <span className="relative aspect-square h-6">
                             <Image src={'/images/decors/mdi_magnify.png'} alt={'search'} fill  />
